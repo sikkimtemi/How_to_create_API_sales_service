@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "app_name": "fm_mail_delete_user",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "USER_POOL_ARN": "arn:aws:cognito-idp:ap-xxxxxxxxx-1:xxxxxxxxxx:userpool/ap-xxxxxxxxx-1_xxxxxxxxxx",
+        "USER_POOL_NAME": "xxxxxxxxxxxx",
+        "USER_POOL_ID": "ap-xxxxxxxx-1_xxxxxxxxxx",
+        "DYNAMODB_API_KEY_TABLE": "xxxxxxxxxxxx",
+        "REGION_NAME": "ap-xxxxxxxxx-1"
+      }
+    }
+  }
+}
