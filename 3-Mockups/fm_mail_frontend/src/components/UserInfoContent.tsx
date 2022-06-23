@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import Image from '../svg/undraw_browsing_re_eycn.svg';
 import Spacer from './Spacer';
 
-const Notice: FC = () => {
+const UserInfoContent: FC = () => {
   // モーダルの表示制御用
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -100,4 +100,4 @@ const Notice: FC = () => {
     </section>
   );
 };
-export default Notice;
+export default UserInfoContent;

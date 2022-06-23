@@ -10,7 +10,7 @@ import openBillingPortal from '../function/StripeUtil';
 import stateCurrentUser from '../atom/User';
 import Spinner from './Spinner';
 
-const Notice: FC = () => {
+const UserInfoContent: FC = () => {
   const [user] = useAtom(stateCurrentUser);
 
   // ユーザー属性からemailと現在のプランを取り出す
@@ -168,4 +168,4 @@ const Notice: FC = () => {
     </section>
   );
 };
-export default Notice;
+export default UserInfoContent;
