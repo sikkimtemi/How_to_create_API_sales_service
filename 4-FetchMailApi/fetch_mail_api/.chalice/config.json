@@ -1,0 +1,10 @@
+{
+  "version": "2.0",
+  "app_name": "fetch_mail_api",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "lambda_memory_size": 512
+    }
+  }
+}
