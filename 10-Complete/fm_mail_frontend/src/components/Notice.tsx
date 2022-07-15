@@ -22,9 +22,9 @@ const Notice: FC<NoticeProps> = ({ title, message }) => (
     <div className="mx-auto max-w-screen-md px-4 md:px-8">
       <h1 className="mb-8 text-4xl font-bold">お知らせ</h1>
       <h2 className="mb-8 text-2xl font-bold">{title}</h2>
-      <p className="mb-4">
+      <div className="mb-4">
         <ReactMarkdown>{message}</ReactMarkdown>
-      </p>
+      </div>
       <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
         <img
           className="rounded object-cover object-center"
