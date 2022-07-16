@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, FC } from 'react';
+import { Auth } from 'aws-amplify';
 import Logo from '../svg/FM_Mail_logo.svg';
 import OutsideClickHandler from './OutsideClickHandler';
 
@@ -163,8 +164,10 @@ const Header2: FC = () => {
                         <button
                           type="button"
                           className="block w-full py-2 px-4 text-left text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+                          // eslint-disable-next-line @typescript-eslint/no-misused-promises
+                          onClick={() => Auth.signOut()}
                         >
-                          <Link to="/">ログアウト</Link>
+                          ログアウト
                         </button>
                       </li>
                     </ul>

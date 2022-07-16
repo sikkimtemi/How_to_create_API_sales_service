@@ -1,9 +1,14 @@
 import { FC, useState } from 'react';
+import { useAtom } from 'jotai';
 import Modal from 'react-modal';
 import Image from '../svg/undraw_browsing_re_eycn.svg';
 import Spacer from './Spacer';
+import stateCurrentUser from '../atom/User';
 
 const UserInfoContent: FC = () => {
+  const [user] = useAtom(stateCurrentUser);
+  const email = user?.signInUserSession.idToken.payload.email;
+
   // モーダルの表示制御用
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -24,7 +29,7 @@ const UserInfoContent: FC = () => {
       <div className="mx-auto max-w-screen-md px-4 md:px-8">
         <h1 className="mb-8 text-4xl font-bold">ユーザー情報</h1>
         <p className="mb-4">ご利用中のプランは FREE プランです。</p>
-        <p className="mb-4">メールアドレスは sample@example.com です。</p>
+        <p className="mb-4">メールアドレスは {email} です。</p>
         <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
           <img
             className="rounded object-cover object-center"

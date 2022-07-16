@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Amplify from 'aws-amplify';
+import awsExports from './awsExports';
 import App from './App';
 import Canceled from './routes/Canceled';
 import CanceledAuth from './routes/CanceledAuth';
@@ -19,6 +21,9 @@ import ShowApiKey from './routes/ShowApiKey';
 import Upgrade from './routes/Upgrade';
 import UserInfo from './routes/UserInfo';
 import Welcome from './routes/Welcome';
+
+// Amplifyの初期設定
+Amplify.configure(awsExports);
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Failed to find the root element');
