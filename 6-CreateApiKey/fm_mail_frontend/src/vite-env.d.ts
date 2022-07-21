@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
+  readonly VITE_DYNAMODB_BASE_URL: string;
   readonly VITE_OAUTH_DOMAIN: string;
   readonly VITE_OAUTH_REDIRECT_SIGN_IN: string;
   readonly VITE_OAUTH_REDIRECT_SIGN_OUT: string;

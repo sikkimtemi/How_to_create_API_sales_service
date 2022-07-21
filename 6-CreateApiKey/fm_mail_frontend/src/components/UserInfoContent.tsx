@@ -3,11 +3,13 @@ import { useAtom } from 'jotai';
 import Modal from 'react-modal';
 import Image from '../svg/undraw_browsing_re_eycn.svg';
 import Spacer from './Spacer';
-import stateCurrentUser from '../atom/User';
+import stateUserAttribute from '../atom/UserAttribute';
 
 const UserInfoContent: FC = () => {
-  const [user] = useAtom(stateCurrentUser);
-  const email = user?.signInUserSession.idToken.payload.email;
+  // ユーザー属性からemailと現在のプランを取り出す
+  const [userAttribute] = useAtom(stateUserAttribute);
+  const email = userAttribute?.email;
+  const planType = userAttribute?.planType;
 
   // モーダルの表示制御用
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -28,7 +30,7 @@ const UserInfoContent: FC = () => {
     <section className="bg-white py-6 sm:py-8 lg:py-12">
       <div className="mx-auto max-w-screen-md px-4 md:px-8">
         <h1 className="mb-8 text-4xl font-bold">ユーザー情報</h1>
-        <p className="mb-4">ご利用中のプランは FREE プランです。</p>
+        <p className="mb-4">ご利用中のプランは{planType}プランです。</p>
         <p className="mb-4">メールアドレスは {email} です。</p>
         <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
           <img

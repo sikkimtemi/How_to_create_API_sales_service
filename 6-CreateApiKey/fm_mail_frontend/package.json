@@ -17,6 +17,7 @@
     "@xzar90/react-router-hash-link": "^6.0.4",
     "aws-amplify": "^4.3.27",
     "jotai": "^1.7.4",
+    "ky": "^0.31.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-markdown": "^8.0.0",
