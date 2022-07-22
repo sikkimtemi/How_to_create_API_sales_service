@@ -10,7 +10,13 @@ const Contact: FC = () => (
           お問い合わせ
         </h2>
       </div>
-      <form className="mx-auto grid max-w-screen-md gap-4" name="contact">
+      <form
+        className="mx-auto grid max-w-screen-md gap-4"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/dummy_thanks.html"
+      >
         <div className="sm:col-span-2">
           <label htmlFor="name" className="text-sm text-gray-800 sm:text-base">
             お名前<span className="required-dot text-red-500">*</span>
