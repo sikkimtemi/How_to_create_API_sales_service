@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "app_name": "fm_mail_stripe_webhook",
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "USER_POOL_ID": "ap-xxxxxxxx-1_xxxxxxxxxx",
+        "DYNAMODB_API_KEY_TABLE": "xxxxxxxxxxxx",
+        "DYNAMODB_CUSTOMER_TABLE": "xxxxxxxxxxxx",
+        "REGION_NAME": "ap-xxxxxxxxx-1",
+        "STRIPE_ENDPOINT_SECRET": "whsec_xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      }
+    }
+  }
+}
