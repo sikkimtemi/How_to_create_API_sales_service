@@ -92,7 +92,7 @@ const UserInfoContent: FC = () => {
         <h2 className="mb-8 text-2xl font-bold text-red-500">
           アカウントの削除
         </h2>
-        PROプランをご契約の場合は、事前に請求ポータルでサブスクリプションを解約してください。
+        PROプランをご契約の場合は、事前にカスタマーポータルでサブスクリプションを解約してください。
         <br />
         アカウントを削除すると同じIDによるアカウント新規登録はできなくなります。
         <div className="mt-5 flex items-center justify-between sm:col-span-2">
@@ -104,7 +104,7 @@ const UserInfoContent: FC = () => {
             // eslint-disable-next-line @typescript-eslint/no-misused-promises
             onClick={() => openBillingPortal(user)}
           >
-            請求ポータル
+            カスタマーポータル
           </button>
           <button
             type="button"

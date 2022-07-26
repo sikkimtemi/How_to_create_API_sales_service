@@ -33,10 +33,10 @@ const UpgradeContent: FC = () => {
             type="button"
             className="inline-flex rounded border-0 bg-blue-500 py-3 px-6 text-lg text-white hover:bg-blue-600 focus:outline-none active:bg-blue-700"
           >
-            請求ポータルを表示
+            カスタマーポータルを表示
           </button>
           <p className="text-sm text-gray-500">
-            ※Stripe（決済サイト）の請求ポータルに移動します。
+            ※Stripe（決済サイト）のカスタマーポータルに移動します。
           </p>
         </div>
       </section>
